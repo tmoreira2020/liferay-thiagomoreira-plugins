@@ -209,4 +209,7 @@
 	<ciManagement>
 		<url>https://tmoreira2020.ci.cloudbees.com/job/liferay-thiagomoreira-plugins</url>
 	</ciManagement>
+	<modules>
+		<module>themes</module>
+	</modules>
 </project>
