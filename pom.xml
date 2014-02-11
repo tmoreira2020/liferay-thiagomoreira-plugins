@@ -337,5 +337,6 @@
 	<modules>
 		<module>hooks</module>
 		<module>themes</module>
+		<module>portlets</module>
 	</modules>
 </project>
