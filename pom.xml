@@ -177,6 +177,28 @@
 						<appServerLibGlobalDir>${local.tomcat.home}/lib</appServerLibGlobalDir>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>com.mycila</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<version>2.6</version>
+					<configuration>
+						<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+						<properties>
+							<owner>Thiago Moreira</owner>
+							<email>tmoreira2020@gmail.com</email>
+						</properties>
+						<excludes>
+							<exclude>LICENSE</exclude>
+						</excludes>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<resources>
