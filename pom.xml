@@ -12,6 +12,8 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>Thiago Moreira Plugins</name>
 	<packaging>pom</packaging>
+    <description>Set of random plugins developed to Liferay</description>
+    <url>http://www.thiagomoreira.com.br/projects/liferay-thiagomoreira-plugins</url>
 	<inceptionYear>2014</inceptionYear>
 	<licenses>
 		<license>
