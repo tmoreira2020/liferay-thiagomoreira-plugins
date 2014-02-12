@@ -23,7 +23,7 @@
 	<parent>
 		<groupId>br.com.thiagomoreira</groupId>
 		<artifactId>themes</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>bootstrap-jumbotron-theme</artifactId>
