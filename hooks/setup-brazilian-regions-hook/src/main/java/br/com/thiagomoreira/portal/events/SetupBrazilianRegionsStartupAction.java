@@ -19,6 +19,7 @@ import com.liferay.portal.kernel.events.ActionException;
 import com.liferay.portal.kernel.events.SimpleAction;
 import com.liferay.portal.model.Country;
 import com.liferay.portal.model.Region;
+import com.liferay.portal.security.permission.PermissionChecker;
 import com.liferay.portal.security.permission.PermissionThreadLocal;
 import com.liferay.portal.service.CountryServiceUtil;
 import com.liferay.portal.service.RegionServiceUtil;
@@ -31,6 +32,9 @@ import java.util.List;
 public class SetupBrazilianRegionsStartupAction extends SimpleAction {
 
 	public void run(String[] companyIds) throws ActionException {
+
+		PermissionChecker permissionChecker = PermissionThreadLocal.getPermissionChecker();
+
 		try {
 
 			PermissionThreadLocal.setPermissionChecker(new OminAdminPermissionChecker());
@@ -70,6 +74,8 @@ public class SetupBrazilianRegionsStartupAction extends SimpleAction {
 			}
 		} catch (Exception e) {
 			throw new ActionException(e);
+		} finally {
+			PermissionThreadLocal.setPermissionChecker(permissionChecker);
 		}
 
 	}
