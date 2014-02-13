@@ -227,7 +227,7 @@
 	</build>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<liferay.auto.deploy.dir>${user.home}/projects/liferay/bundles/deploy</liferay.auto.deploy.dir>
+		<liferay.auto.deploy.dir>${user.home}/projects/thiagomoreira/liferay-portal-6.2.0-ce-ga1/deploy</liferay.auto.deploy.dir>
 		<liferay.dependencies.version>6.2.0-ga1</liferay.dependencies.version>
 		<liferay.plugins.version>6.2.0-ga1</liferay.plugins.version>
 		<powermock.version>1.5.4</powermock.version>
