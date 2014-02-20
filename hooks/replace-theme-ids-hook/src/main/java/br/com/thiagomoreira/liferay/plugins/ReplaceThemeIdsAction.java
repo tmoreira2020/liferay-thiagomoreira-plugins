@@ -19,6 +19,8 @@ import java.util.List;
 
 import com.liferay.portal.kernel.events.ActionException;
 import com.liferay.portal.kernel.events.SimpleAction;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.PropsUtil;
 import com.liferay.portal.kernel.util.Validator;
@@ -32,6 +34,8 @@ import com.liferay.portal.service.LayoutSetLocalServiceUtil;
  * @author Thiago Leão Moreira
  */
 public class ReplaceThemeIdsAction extends SimpleAction {
+
+	private static Log log = LogFactoryUtil.getLog(ReplaceThemeIdsAction.class);
 
 	public void run(String[] companyIds) throws ActionException {
 		String[] oldThemeIdPatterns = PropsUtil.getArray("replace.themeIds.old");
@@ -52,6 +56,7 @@ public class ReplaceThemeIdsAction extends SimpleAction {
 	}
 
 	protected void updateLayouts(String oldThemeIdPattern, String newThemeIdPattern) throws Exception {
+		int changes = 0;
 		List<Layout> layouts =  LayoutLocalServiceUtil.getLayouts(-1, -1);
 		for (Layout layout : layouts) {
 			String themeId = layout.getThemeId();
@@ -61,9 +66,13 @@ public class ReplaceThemeIdsAction extends SimpleAction {
 
 				if (!newThemeId.equals(themeId)) {
 					LayoutLocalServiceUtil.updateLookAndFeel(layout.getGroupId(), layout.getPrivateLayout(), layout.getLayoutId(), newThemeIdPattern, layout.getColorSchemeId(), layout.getCss(), false);
+					changes++;
 				}
 			}
 		}
+		log.info(changes + " layouts had its themeIds changed to " + newThemeIdPattern);
+
+		changes = 0;
 		List<LayoutSet> layoutSets =  LayoutSetLocalServiceUtil.getLayoutSets(-1, -1);
 		for (LayoutSet layoutSet : layoutSets) {
 			String themeId = layoutSet.getThemeId();
@@ -73,8 +82,10 @@ public class ReplaceThemeIdsAction extends SimpleAction {
 
 				if (!newThemeId.equals(themeId)) {
 					LayoutSetLocalServiceUtil.updateLookAndFeel(layoutSet.getGroupId(), layoutSet.getPrivateLayout(), newThemeIdPattern, layoutSet.getColorSchemeId(), layoutSet.getCss(), false);
+					changes++;
 				}
 			}
 		}
+		log.info(changes + " layoutSets had its themeIds changed to " + newThemeIdPattern);
 	}
 }
