@@ -24,7 +24,7 @@
 		<version>7</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.thiagomoreira</groupId>
+	<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 	<artifactId>liferay-thiagomoreira-plugins</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<name>Thiago Moreira Plugins</name>
