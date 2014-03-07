@@ -1,19 +1,20 @@
 <%--
-/**
- * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
- *
- * This library is free software; you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License, or (at your option)
- * any later version.
- *
- * This library is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
- * details.
- */
---%>
 
+    Copyright (C) 2014 Thiago Moreira (tmoreira2020@gmail.com)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%@ page import="com.liferay.portal.kernel.language.LanguageUtil" %>
@@ -86,7 +87,7 @@ CKEDITOR.config.contentsLanguage = '<%= HtmlUtil.escapeJS(contentsLanguageId.rep
 
 CKEDITOR.config.entities = false;
 
-CKEDITOR.config.extraPlugins = 'ajaxsave,media,restore,scayt,wsc';
+CKEDITOR.config.extraPlugins = 'ajaxsave,media,restore,scayt,wsc,loremipsum';
 
 CKEDITOR.config.height = 265;
 
@@ -107,6 +108,7 @@ CKEDITOR.config.toolbar_editInPlace = [
 	['Undo', 'Redo'],
 	['SpellChecker', 'Scayt'],
 	['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'], ['Source', 'RemoveFormat'],
+	['LoremIpsum1', 'LoremIpsum3', 'LoremIpsum5']
 ];
 
 CKEDITOR.config.toolbar_email = [
@@ -117,7 +119,7 @@ CKEDITOR.config.toolbar_email = [
 	['Undo', 'Redo', '-', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'SelectAll', 'RemoveFormat'],
 	['Source'],
 	['Link', 'Unlink'],
-	['Image']
+	['Image'], ['LoremIpsum1', 'LoremIpsum3', 'LoremIpsum5']
 ];
 
 CKEDITOR.config.toolbar_liferay = [
@@ -137,10 +139,10 @@ CKEDITOR.config.toolbar_liferay = [
 	['Find', 'Replace', 'SpellChecker', 'Scayt'],
 	['SelectAll', 'RemoveFormat'],
 	['Subscript', 'Superscript']
-
 	<c:if test="<%= !inlineEdit %>">
 		,['Source']
 	</c:if>
+	,['LoremIpsum1', 'LoremIpsum3', 'LoremIpsum5']
 ];
 
 CKEDITOR.config.toolbar_liferayArticle = [
@@ -155,7 +157,8 @@ CKEDITOR.config.toolbar_liferayArticle = [
 	'/',
 	['Source'],
 	['Link', 'Unlink', 'Anchor'],
-	['Image', 'Flash', <c:if test="<%= XugglerUtil.isEnabled() %>">'Audio', 'Video',</c:if> 'Table', '-', 'Smiley', 'SpecialChar', 'LiferayPageBreak']
+	['Image', 'Flash', <c:if test="<%= XugglerUtil.isEnabled() %>">'Audio', 'Video',</c:if> 'Table', '-', 'Smiley', 'SpecialChar', 'LiferayPageBreak'],
+	['LoremIpsum1', 'LoremIpsum3', 'LoremIpsum5']
 ];
 
 CKEDITOR.config.toolbar_phone = [
@@ -175,7 +178,8 @@ CKEDITOR.config.toolbar_tablet = [
 	['NumberedList', 'BulletedList'],
 	['Image', 'Link', 'Unlink'],
 	['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-	['Styles', 'FontSize']
+	['Styles', 'FontSize'],['LoremIpsum1', 'LoremIpsum3', 'LoremIpsum5']
+
 ];
 
 CKEDITOR.on(
