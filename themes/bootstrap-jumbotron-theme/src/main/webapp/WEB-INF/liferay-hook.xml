@@ -16,19 +16,9 @@
     limitations under the License.
 
 -->
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.2.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_2_0.dtd">
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
-		<artifactId>liferay-thiagomoreira-plugins</artifactId>
-		<version>0.2-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
-	</parent>
-	<artifactId>themes</artifactId>
-	<packaging>pom</packaging>
-	<name>Thiago Moreira Themes</name>
-	<modules>
-		<module>bootstrap-jumbotron-theme</module>
-	</modules>
-</project>
+<hook>
+	<language-properties>content/Language_en.properties</language-properties>
+	<language-properties>content/Language_pt_BR.properties</language-properties>
+</hook>

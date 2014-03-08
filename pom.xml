@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<!--
+
+    Copyright (C) 2014 Thiago Moreira (tmoreira2020@gmail.com)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.thiagomoreira</groupId>
+	<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 	<artifactId>liferay-thiagomoreira-plugins</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>0.2-SNAPSHOT</version>
 	<name>Thiago Moreira Plugins</name>
 	<packaging>pom</packaging>
+    <description>Set of random plugins developed to Liferay</description>
+    <url>http://www.thiagomoreira.com.br/projects/liferay-thiagomoreira-plugins</url>
 	<inceptionYear>2014</inceptionYear>
 	<licenses>
 		<license>
@@ -40,7 +58,8 @@
 		<connection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</connection>
 		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
 		<url>https://github.com/tmoreira2020/liferay-thiagomoreira-plugins</url>
-	</scm>
+	  <tag>HEAD</tag>
+  </scm>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -159,6 +178,23 @@
 					<version>2.6</version>
 				</plugin>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+						<webResources>
+							<resource>
+								<directory>src/main/resources/WEB-INF</directory>
+								<targetPath>WEB-INF</targetPath>
+								<filtering>true</filtering>
+								<includes>
+									<include>liferay-plugin-package.properties</include>
+								</includes>
+							</resource>
+						</webResources>
+					</configuration>
+				</plugin>
+				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>cobertura-maven-plugin</artifactId>
 					<version>2.6</version>
@@ -175,6 +211,28 @@
 						<appServerLibGlobalDir>${local.tomcat.home}/lib</appServerLibGlobalDir>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>com.mycila</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<version>2.6</version>
+					<configuration>
+						<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+						<properties>
+							<owner>Thiago Moreira</owner>
+							<email>tmoreira2020@gmail.com</email>
+						</properties>
+						<excludes>
+							<exclude>LICENSE</exclude>
+						</excludes>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<resources>
@@ -186,7 +244,7 @@
 	</build>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<liferay.auto.deploy.dir>${user.home}/projects/liferay/bundles/deploy</liferay.auto.deploy.dir>
+		<liferay.auto.deploy.dir>${user.home}/projects/thiagomoreira/liferay-portal-6.2.0-ce-ga1/deploy</liferay.auto.deploy.dir>
 		<liferay.dependencies.version>6.2.0-ga1</liferay.dependencies.version>
 		<liferay.plugins.version>6.2.0-ga1</liferay.plugins.version>
 		<powermock.version>1.5.4</powermock.version>
@@ -239,6 +297,7 @@
 		<url>https://tmoreira2020.ci.cloudbees.com/job/liferay-thiagomoreira-plugins</url>
 	</ciManagement>
 	<modules>
+		<module>hooks</module>
 		<module>themes</module>
 	</modules>
 </project>
