@@ -16,8 +16,7 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
@@ -26,7 +25,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 	<artifactId>liferay-thiagomoreira-plugins</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>Thiago Moreira Plugins</name>
 	<packaging>pom</packaging>
     <description>Set of random plugins developed to Liferay</description>
@@ -59,7 +58,8 @@
 		<connection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</connection>
 		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
 		<url>https://github.com/tmoreira2020/liferay-thiagomoreira-plugins</url>
-	</scm>
+	  <tag>liferay-thiagomoreira-plugins-0.1</tag>
+  </scm>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
