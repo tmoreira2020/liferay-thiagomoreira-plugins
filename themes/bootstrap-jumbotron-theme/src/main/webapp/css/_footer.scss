@@ -19,7 +19,7 @@ footer {
 	}
 }
 
-@media all and (max-width: 767px) {
+@include respond-to(phone, tablet) {
 	.copyright {
 		float: none !important;
 	}
