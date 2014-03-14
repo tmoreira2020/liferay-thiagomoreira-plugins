@@ -76,10 +76,10 @@
             #set($footerSkypeSet = $validator.isNotNull($footerSkype))
 
             #if($footerPhoneSet)
-                <div>$footerPhone#if($footerEmailSet||$footerSkypeSet)<span class="hidden-phone">&nbsp;|&nbsp;</span>#end</div>
+                <div>$footerPhone#if($footerEmailSet||$footerSkypeSet)<span class="hidden-phone hidden-tablet">&nbsp;|&nbsp;</span>#end</div>
             #end
             #if($footerEmailSet)
-                <div><a href="mailto:$footerEmail">$footerEmail</a>#if($footerSkypeSet)<span class="hidden-phone">&nbsp;|&nbsp;</span>#end</div>
+                <div><a href="mailto:$footerEmail">$footerEmail</a>#if($footerSkypeSet)<span class="hidden-phone hidden-tablet">&nbsp;|&nbsp;</span>#end</div>
             #end
             #if($footerSkypeSet)
                 <div> <a href="skype:$footerSkype?call">skype</a></div>
