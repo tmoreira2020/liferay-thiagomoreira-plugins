@@ -17,3 +17,8 @@
 @import "mixins";
 @import "jumbotron";
 @import "footer";
+
+.user-avatar-image {
+	width: 20px;
+}
+
