@@ -27,6 +27,9 @@
 	<artifactId>themes</artifactId>
 	<packaging>pom</packaging>
 	<name>Thiago Moreira Themes</name>
+	<scm>
+		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
+	</scm>
 	<modules>
 		<module>bootstrap-jumbotron-theme</module>
 	</modules>

@@ -27,7 +27,9 @@
 	<artifactId>hooks</artifactId>
 	<packaging>pom</packaging>
 	<name>Thiago Moreira Hooks</name>
-
+	<scm>
+		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
+	</scm>
 	<dependencies>
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
@@ -35,7 +37,6 @@
 			<version>${liferay.dependencies.version}</version>
 		</dependency>
 	</dependencies>
-
 	<modules>
 		<module>replace-theme-ids-hook</module>
 		<module>setup-brazilian-regions-hook</module>

@@ -28,4 +28,7 @@
 	<packaging>war</packaging>
 	<name>Replace Theme IDs Hook</name>
 	<description>This app helps to replace old theme to new ones.</description>
+	<scm>
+		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
+	</scm>
 </project>

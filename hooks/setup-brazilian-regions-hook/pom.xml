@@ -28,4 +28,7 @@
 	<packaging>war</packaging>
 	<name>Setup Brazilian Regions Hook</name>
 	<description>This app adds the 26 states of Brazil as regions to the Brazil country entity. It enable users to create more complete Brazil's addresses for themselves, contacts and companies.</description>
+	<scm>
+		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
+	</scm>
 </project>

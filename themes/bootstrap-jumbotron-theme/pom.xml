@@ -28,6 +28,9 @@
 	<packaging>war</packaging>
 	<name>Bootstrap Jumbotron Theme</name>
 	<description>Bootstrap Jumbotron theme is a theme based on the Jumbotron example from http://getbootstrap.com/2.3.2/examples/hero.html and the _styled theme. By default it prints the site's name and description into the jumbotron area. It also enables add contact information to the footer through theme settings in the Site Administration area.</description>
+	<scm>
+		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
+	</scm>
 	<build>
 		<plugins>
 			<plugin>

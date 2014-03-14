@@ -28,4 +28,7 @@
 	<packaging>war</packaging>
 	<name>Lorem Ipsum Button Hook</name>
 	<description>This app adds 3 buttons to the CKEditor to create 1, 3 or 5 paragraphs of lorem ipsum content. Its goal is to help designers, sales and users in general create content easily.</description>
+	<scm>
+		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
+	</scm>
 </project>
