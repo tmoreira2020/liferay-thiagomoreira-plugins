@@ -24,3 +24,29 @@
 	@include box-shadow(0 0 0 2px #5594E0);
 }
 
+@include respond-to(phone, tablet) {
+	.aui {
+		#navigation {
+			display: none;
+
+			&.open {
+				display: block;
+
+				.navbar-inner {
+					@include border-radius(3px);
+
+					padding: 10px;
+
+					.nav-collapse {
+						height: auto;
+						overflow: visible;
+					}
+				}
+			}
+
+			.nav {
+				margin: 0;
+			}
+		}
+	}
+}
