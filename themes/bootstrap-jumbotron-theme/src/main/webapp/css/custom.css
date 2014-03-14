@@ -48,5 +48,9 @@
 				margin: 0;
 			}
 		}
+
+		.signed-out #_145_navAddControlsNavbarBtn {
+			display: none;
+		}
 	}
 }
