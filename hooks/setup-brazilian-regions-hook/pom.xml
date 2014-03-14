@@ -23,7 +23,6 @@
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>hooks</artifactId>
 		<version>0.2-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>setup-brazilian-regions-hook</artifactId>
 	<packaging>war</packaging>

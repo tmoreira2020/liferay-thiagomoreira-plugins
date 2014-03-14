@@ -23,7 +23,6 @@
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>liferay-thiagomoreira-plugins</artifactId>
 		<version>0.2-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>themes</artifactId>
 	<packaging>pom</packaging>
