@@ -217,6 +217,9 @@
 					<version>2.6</version>
 					<configuration>
 						<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+						<mapping>
+							<scss>JAVADOC_STYLE</scss>
+						</mapping>
 						<properties>
 							<owner>Thiago Moreira</owner>
 							<email>tmoreira2020@gmail.com</email>
