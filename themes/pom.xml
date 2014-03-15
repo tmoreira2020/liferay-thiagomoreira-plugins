@@ -22,14 +22,15 @@
 	<parent>
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>liferay-thiagomoreira-plugins</artifactId>
-		<version>0.0.0.2-SNAPSHOT</version>
+		<version>1.0.0.0</version>
 	</parent>
 	<artifactId>themes</artifactId>
 	<packaging>pom</packaging>
 	<name>Thiago Moreira Themes</name>
 	<scm>
 		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
-	</scm>
+	  <tag>liferay-thiagomoreira-plugins-1.0.0.0</tag>
+  </scm>
 	<modules>
 		<module>bootstrap-jumbotron-theme</module>
 	</modules>
