@@ -247,6 +247,9 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
+				<excludes>
+					<exclude>WEB-INF/liferay-plugin-package.properties</exclude>
+				</excludes>
 			</resource>
 		</resources>
 	</build>
