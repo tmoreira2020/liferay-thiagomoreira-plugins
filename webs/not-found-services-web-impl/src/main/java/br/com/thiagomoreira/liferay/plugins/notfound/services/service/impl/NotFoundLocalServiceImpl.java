@@ -15,7 +15,15 @@
  */
 package br.com.thiagomoreira.liferay.plugins.notfound.services.service.impl;
 
+import java.util.Date;
+
+import br.com.thiagomoreira.liferay.plugins.notfound.services.model.NotFound;
 import br.com.thiagomoreira.liferay.plugins.notfound.services.service.base.NotFoundLocalServiceBaseImpl;
+
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.service.ServiceContext;
 
 /**
  * The implementation of the not found local service.
@@ -32,9 +40,39 @@ import br.com.thiagomoreira.liferay.plugins.notfound.services.service.base.NotFo
  * @see br.com.thiagomoreira.liferay.plugins.notfound.services.service.NotFoundLocalServiceUtil
  */
 public class NotFoundLocalServiceImpl extends NotFoundLocalServiceBaseImpl {
-    /*
-     * NOTE FOR DEVELOPERS:
-     *
-     * Never reference this interface directly. Always use {@link br.com.thiagomoreira.liferay.plugins.notfound.services.service.NotFoundLocalServiceUtil} to access the not found local service.
-     */
+
+	public NotFound addNotFound(String className, String keywords, ServiceContext serviceContext) 
+		throws PortalException, SystemException {
+
+		validate(className, serviceContext);
+
+		long userId = serviceContext.getUserId();
+		Date now = new Date();
+		long classNameId = classNameLocalService.getClassNameId(className);
+
+		long notfoundId = counterLocalService.increment(NotFound.class.getName());
+
+		NotFound notFound = notFoundPersistence.create(notfoundId);
+
+		notFound.setCompanyId(serviceContext.getCompanyId());
+		notFound.setGroupId(serviceContext.getScopeGroupId());
+		notFound.setUserId(userId);
+		notFound.setCreateDate(now);
+
+		notFound.setClassNameId(classNameId);
+		notFound.setKeywords(keywords);
+
+		notFoundPersistence.update(notFound);
+
+		return notFound;
+	}
+
+	protected void validate(String className, ServiceContext serviceContext) {
+		if (Validator.isNull(className)) {
+			throw new IllegalArgumentException("className cannot be null");
+		}
+		if (Validator.isNull(serviceContext)) {
+			throw new IllegalArgumentException("serviceContext cannot be null");
+		}
+	}
 }
