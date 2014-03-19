@@ -60,6 +60,8 @@ public class NotFoundLocalServiceClpInvoker {
     private String[] _methodParameterTypes38;
     private String _methodName39;
     private String[] _methodParameterTypes39;
+    private String _methodName44;
+    private String[] _methodParameterTypes44;
 
     public NotFoundLocalServiceClpInvoker() {
         _methodName0 = "addNotFound";
@@ -151,6 +153,13 @@ public class NotFoundLocalServiceClpInvoker {
         _methodName39 = "setBeanIdentifier";
 
         _methodParameterTypes39 = new String[] { "java.lang.String" };
+
+        _methodName44 = "addNotFound";
+
+        _methodParameterTypes44 = new String[] {
+                "java.lang.String", "java.lang.String",
+                "com.liferay.portal.service.ServiceContext"
+            };
     }
 
     public Object invokeMethod(String name, String[] parameterTypes,
@@ -252,6 +261,13 @@ public class NotFoundLocalServiceClpInvoker {
             NotFoundLocalServiceUtil.setBeanIdentifier((java.lang.String) arguments[0]);
 
             return null;
+        }
+
+        if (_methodName44.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes44, parameterTypes)) {
+            return NotFoundLocalServiceUtil.addNotFound((java.lang.String) arguments[0],
+                (java.lang.String) arguments[1],
+                (com.liferay.portal.service.ServiceContext) arguments[2]);
         }
 
         throw new UnsupportedOperationException();

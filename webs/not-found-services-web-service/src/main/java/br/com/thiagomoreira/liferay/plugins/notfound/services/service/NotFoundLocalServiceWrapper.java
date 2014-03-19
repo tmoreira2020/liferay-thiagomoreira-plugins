@@ -289,6 +289,16 @@ public class NotFoundLocalServiceWrapper implements NotFoundLocalService,
             arguments);
     }
 
+    @Override
+    public br.com.thiagomoreira.liferay.plugins.notfound.services.model.NotFound addNotFound(
+        java.lang.String className, java.lang.String keywords,
+        com.liferay.portal.service.ServiceContext serviceContext)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
+        return _notFoundLocalService.addNotFound(className, keywords,
+            serviceContext);
+    }
+
     /**
      * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
      */

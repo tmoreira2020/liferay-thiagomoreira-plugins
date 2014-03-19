@@ -278,6 +278,14 @@ public class NotFoundLocalServiceUtil {
         return getService().invokeMethod(name, parameterTypes, arguments);
     }
 
+    public static br.com.thiagomoreira.liferay.plugins.notfound.services.model.NotFound addNotFound(
+        java.lang.String className, java.lang.String keywords,
+        com.liferay.portal.service.ServiceContext serviceContext)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
+        return getService().addNotFound(className, keywords, serviceContext);
+    }
+
     public static void clearService() {
         _service = null;
     }

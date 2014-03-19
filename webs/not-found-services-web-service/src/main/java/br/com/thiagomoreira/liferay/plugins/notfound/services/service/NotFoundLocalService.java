@@ -250,4 +250,10 @@ public interface NotFoundLocalService extends BaseLocalService,
     public java.lang.Object invokeMethod(java.lang.String name,
         java.lang.String[] parameterTypes, java.lang.Object[] arguments)
         throws java.lang.Throwable;
+
+    public br.com.thiagomoreira.liferay.plugins.notfound.services.model.NotFound addNotFound(
+        java.lang.String className, java.lang.String keywords,
+        com.liferay.portal.service.ServiceContext serviceContext)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException;
 }
