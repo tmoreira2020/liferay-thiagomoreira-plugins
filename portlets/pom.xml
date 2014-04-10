@@ -49,4 +49,7 @@
 			<version>${liferay.dependencies.version}</version>
 		</dependency>
 	</dependencies>
+	<modules>
+		<module>share-buttons-portlet</module>
+	</modules>
 </project>
