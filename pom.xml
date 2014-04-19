@@ -226,6 +226,20 @@
 					<version>2.6</version>
 				</plugin>
 				<plugin>
+					<groupId>org.zeroturnaround</groupId>
+					<artifactId>jrebel-maven-plugin</artifactId>
+					<version>1.1.5</version>
+					<executions>
+						<execution>
+							<id>generate-rebel-xml</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>generate</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
 					<groupId>com.liferay.maven.plugins</groupId>
 					<artifactId>liferay-maven-plugin</artifactId>
 					<version>${liferay.plugins.version}</version>
@@ -272,6 +286,10 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>buildnumber-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.zeroturnaround</groupId>
+				<artifactId>jrebel-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 		<resources>
