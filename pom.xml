@@ -252,6 +252,10 @@
 						</properties>
 						<excludes>
 							<exclude>LICENSE</exclude>
+							<exclude>**/indexes.properties</exclude>
+							<exclude>**/indexes.sql</exclude>
+							<exclude>**/sequences.sql</exclude>
+							<exclude>**/tables.sql</exclude>
 						</excludes>
 					</configuration>
 					<executions>
