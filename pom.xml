@@ -246,9 +246,7 @@
 					<configuration>
 						<liferayVersion>${liferay.dependencies.version}</liferayVersion>
 						<autoDeployDir>${liferay.auto.deploy.dir}</autoDeployDir>
-						<appServerDeployDir>${local.tomcat.home}/webapps</appServerDeployDir>
-						<appServerPortalDir>${local.tomcat.home}/webapps/ROOT</appServerPortalDir>
-						<appServerLibGlobalDir>${local.tomcat.home}/lib</appServerLibGlobalDir>
+						<appServerPortalDir>${liferay.app.server.portal.dir}</appServerPortalDir>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -304,7 +302,9 @@
 	</build>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<liferay.auto.deploy.dir>${user.home}/projects/thiagomoreira/liferay-portal-6.2.0-ce-ga1/deploy</liferay.auto.deploy.dir>
+		<liferay.home>${user.home}/projects/thiagomoreira/liferay-portal-6.2.0-ce-ga1</liferay.home>
+		<liferay.auto.deploy.dir>${liferay.home}/deploy</liferay.auto.deploy.dir>
+		<liferay.app.server.portal.dir>${liferay.home}/tomcat-7.0.42/webapps/ROOT</liferay.app.server.portal.dir>
 		<liferay.dependencies.version>6.2.0-ga1</liferay.dependencies.version>
 		<liferay.plugins.version>6.2.0-ga1</liferay.plugins.version>
 		<powermock.version>1.5.4</powermock.version>
