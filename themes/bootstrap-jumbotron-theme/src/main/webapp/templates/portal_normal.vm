@@ -44,13 +44,22 @@
     #dockbar()
 
 
-    <div class="container-fluid" id="wrapper">
+    <div class="container-fluid" id="wrapper" style="max-width: $theme_settings.getProperty('container-max-width')px;">
 
         <header id="banner" role="banner">
+        #if ($use_company_logo)
             <div class="jumbotron">
                 <h1>$site_name</h1>
                 <p>$page_group.getDescription()</p>
             </div>
+        #else
+            <a class="$logo_css_class" href="$site_default_url" title="#language("go-to") $site_name">
+                <hgroup style="background-image: url('$site_logo');">
+                    <h1>$site_name</h1>
+                    <h2>$page_group.getDescription()</h2>
+                </hgroup>
+            </a>
+        #end
 
             #parse ("$full_templates_path/navigation.vm")
         </header>
