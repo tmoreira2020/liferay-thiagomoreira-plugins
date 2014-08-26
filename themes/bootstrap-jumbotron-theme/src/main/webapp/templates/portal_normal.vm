@@ -44,7 +44,7 @@
     #dockbar()
 
 
-    <div class="container-fluid" id="wrapper">
+    <div class="container-fluid" id="wrapper" style="max-width: $theme_settings.getProperty('container-max-width')px;">
 
         <header id="banner" role="banner">
         #if ($use_company_logo)
