@@ -28,4 +28,5 @@
 	<artifactId>share-buttons-portlet</artifactId>
 	<packaging>war</packaging>
 	<name>Share Buttons Portlet</name>
+	<description>This app creates a vertical tab in the left side of the page with 3 buttons used to share the current url on Facebook or Twitter or Google Plus.</description>
 </project>
