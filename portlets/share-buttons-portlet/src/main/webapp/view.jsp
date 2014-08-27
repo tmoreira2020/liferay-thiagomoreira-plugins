@@ -17,18 +17,20 @@
 --%>
 <%@ include file="/init.jsp" %>
 
-<div class="share-buttons-bar">
+<c:if test="${themeDisplay.scopeGroup.descriptiveName ne 'Global'}">
+	<div class="share-buttons-bar">
 
-	<%
-		String currentUrl = HttpUtil.encodeURL(PortalUtil.getCurrentCompleteURL(request));
-	%>
-	<a href="https://www.facebook.com/sharer/sharer.php?u=<%= currentUrl %>" target="_blank" title="Share on Facebook"> 
-		<i class="icon-facebook"> </i>
-	</a>
-	<a href="https://twitter.com/share?url=<%= currentUrl %>" target="_blank" title="Share on Twitter">
-		<i class="icon-twitter"> </i>
-	</a>
-	<a href="https://plus.google.com/share?url=<%= currentUrl %>" target="_blank" title="Share on Google Plus">
-		<i class="icon-google-plus"> </i>
-	</a>
-</div>
+		<%
+			String currentUrl = HttpUtil.encodeURL(PortalUtil.getCurrentCompleteURL(request));
+		%>
+		<a href="https://www.facebook.com/sharer/sharer.php?u=<%= currentUrl %>" target="_blank" title="Share on Facebook"> 
+			<i class="icon-facebook"> </i>
+		</a>
+		<a href="https://twitter.com/share?url=<%= currentUrl %>" target="_blank" title="Share on Twitter">
+			<i class="icon-twitter"> </i>
+		</a>
+		<a href="https://plus.google.com/share?url=<%= currentUrl %>" target="_blank" title="Share on Google Plus">
+			<i class="icon-google-plus"> </i>
+		</a>
+	</div>
+</c:if>
