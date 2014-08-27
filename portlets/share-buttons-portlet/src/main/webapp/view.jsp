@@ -17,7 +17,7 @@
 --%>
 <%@ include file="/init.jsp" %>
 
-<c:if test="${themeDisplay.scopeGroup.descriptiveName ne 'Global'}">
+<c:if test="${not layout.typeControlPanel}">
 	<div class="share-buttons-bar">
 
 		<%
