@@ -29,7 +29,7 @@
             <setting configurable="true" key="footer-phone" type="text" />
             <setting configurable="true" key="footer-email" type="text" />
             <setting configurable="true" key="footer-skype" type="text" />
-            <setting configurable="true" key="container-max-width" type="text" value="810"/>
+            <setting configurable="true" key="container-max-width" type="text"/>
 		</settings>
 	</theme>
 </look-and-feel>

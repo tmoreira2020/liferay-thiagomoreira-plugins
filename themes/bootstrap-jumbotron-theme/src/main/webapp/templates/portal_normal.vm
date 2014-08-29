@@ -43,8 +43,14 @@
 
     #dockbar()
 
+    #set($containerMaxWidth = $theme_settings.getProperty('container-max-width'))
 
-    <div class="container-fluid" id="wrapper" style="max-width: $theme_settings.getProperty('container-max-width')px;">
+    #if($validator.isNotNull($containerMaxWidth))
+        <div class="container-fluid" id="wrapper" style="max-width: $theme_settings.getProperty('container-max-width')px;">
+    #else
+        <div class="container-fluid" id="wrapper">
+    #end
+
 
         <header id="banner" role="banner">
         #if ($use_company_logo)
