@@ -34,6 +34,7 @@
 				<artifactId>liferay-maven-plugin</artifactId>
 				<configuration>
 					<apiBaseDir>${basedir}/../not-found-services-web-service</apiBaseDir>
+					<pluginName>not-found-services-web</pluginName>
 				</configuration>
 			</plugin>
 		</plugins>
