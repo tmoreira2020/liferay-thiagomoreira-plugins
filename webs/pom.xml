@@ -28,7 +28,6 @@
 	<packaging>pom</packaging>
 	<name>Thiago Moreira Webs</name>
 	<modules>
-		<module>not-found-services-web-service</module>
-		<module>not-found-services-web-impl</module>
+		<module>not-found-services-web</module>
 	</modules>
 </project>

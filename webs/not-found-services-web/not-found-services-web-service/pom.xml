@@ -21,49 +21,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
-		<artifactId>webs</artifactId>
+		<artifactId>not-found-services-web</artifactId>
 		<version>1.1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>not-found-services-web-impl</artifactId>
-	<packaging>war</packaging>
-	<name>Not Found Services Web Impl</name>
-	<description>Service used to store the keywords that returned zero results in a search operation.</description>
+	<artifactId>not-found-services-web-service</artifactId>
+	<packaging>jar</packaging>
+	<name>Not Found Services Web Service</name>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>com.liferay.maven.plugins</groupId>
 				<artifactId>liferay-maven-plugin</artifactId>
 				<configuration>
-					<apiBaseDir>${basedir}/../not-found-services-web-service</apiBaseDir>
+					<webappBaseDir>${basedir}/../not-found-services-web-impl</webappBaseDir>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-	<dependencies>
-		<dependency>
-			<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
-			<artifactId>not-found-services-web-service</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.liferay.portal</groupId>
-			<artifactId>util-java</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>jsp-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.easymock</groupId>
-			<artifactId>easymock</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.powermock</groupId>
-			<artifactId>powermock-module-junit4</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.powermock</groupId>
-			<artifactId>powermock-api-easymock</artifactId>
-		</dependency>
-	</dependencies>
 </project>
