@@ -22,7 +22,7 @@
 	<parent>
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>hooks</artifactId>
-		<version>1.2.0.0</version>
+		<version>1.3.0.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>setup-brazilian-regions-hook</artifactId>
 	<packaging>war</packaging>
@@ -30,6 +30,6 @@
 	<description>This app adds the 26 states of Brazil as regions to the Brazil country entity. It enable users to create more complete Brazil's addresses for themselves, contacts and companies.</description>
 	<scm>
 		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
-	  <tag>liferay-thiagomoreira-plugins-1.2.0.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 </project>
