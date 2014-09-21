@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+
+    Copyright (C) 2014 Thiago Moreira (tmoreira2020@gmail.com)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="br.com.thiagomoreira.liferay.plugins.notfound.services">
+	<author>Thiago Moreira</author>
+	<namespace>TM_NF</namespace>
+	<entity name="NotFound" local-service="true" remote-service="false">
+		<!-- PK fields -->
+
+		<column name="notFoundId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="classNameId" type="long" />
+		<column name="keywords" type="String" />
+
+		<reference entity="ClassName" package-path="com.liferay.portal" />
+	</entity>
+</service-builder>

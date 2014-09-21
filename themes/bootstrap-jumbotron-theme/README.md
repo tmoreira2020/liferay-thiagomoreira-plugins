@@ -18,14 +18,14 @@ Maven:
 <dependency>
     <groupId>br.com.thiagomoreira.liferay.plugins</groupId>
     <artifactId>bootstrap-jumbotron-theme</artifactId>
-    <version>1.1.0.0</version>
+    <version>1.2.0.0</version>
 </dependency>
 ```
 Gradle:
 
 ```groovy
 dependencies {
-    compile(group: "br.com.thiagomoreira.liferay.plugins", name: "bootstrap-jumbotron-theme", version: "1.1.0.0");
+    compile(group: "br.com.thiagomoreira.liferay.plugins", name: "bootstrap-jumbotron-theme", version: "1.2.0.0");
 }
 ```
 ### Support
