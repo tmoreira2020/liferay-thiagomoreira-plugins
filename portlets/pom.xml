@@ -69,5 +69,6 @@
 	</dependencies>
 	<modules>
 		<module>share-buttons-portlet</module>
+		<module>social-buttons-portlet</module>
 	</modules>
 </project>
