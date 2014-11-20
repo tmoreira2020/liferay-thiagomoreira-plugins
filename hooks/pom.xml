@@ -22,14 +22,14 @@
 	<parent>
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>liferay-thiagomoreira-plugins</artifactId>
-		<version>1.3.0.0-SNAPSHOT</version>
+		<version>1.3.0.0</version>
 	</parent>
 	<artifactId>hooks</artifactId>
 	<packaging>pom</packaging>
 	<name>Thiago Moreira Hooks</name>
 	<scm>
 		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>liferay-thiagomoreira-plugins-1.3.0.0</tag>
   </scm>
 	<dependencies>
 		<dependency>
