@@ -9,7 +9,7 @@ Service used to store the keywords that returned zero results in a search operat
 
 ### How to use?
 
-First of all you need to deploy the **not-found-services-web-impl-1.2.0.0.war** in your servlet container. The second is step is create a asynchronous call to the Liferay's MessageBus like the one below. That's it.
+First of all you need to deploy the **not-found-services-web-impl-1.3.0.0.war** in your servlet container. The second is step is create a asynchronous call to the Liferay's MessageBus like the one below. That's it.
 
 ```java
 List results = ...
@@ -39,14 +39,14 @@ Maven:
 <dependency>
     <groupId>br.com.thiagomoreira.liferay.plugins</groupId>
     <artifactId>not-found-services-web</artifactId>
-    <version>1.2.0.0</version>
+    <version>1.3.0.0</version>
 </dependency>
 ```
 Gradle:
 
 ```groovy
 dependencies {
-    compile(group: "br.com.thiagomoreira.liferay.plugins", name: "not-found-services-web", version: "1.2.0.0");
+    compile(group: "br.com.thiagomoreira.liferay.plugins", name: "not-found-services-web", version: "1.3.0.0");
 }
 ```
 ### Support
