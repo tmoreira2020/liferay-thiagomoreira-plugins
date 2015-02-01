@@ -25,7 +25,7 @@
 			<c:if test="${not empty(preference)}">
 				<c:set var="urlName" value="${name}-url" />
 				<c:set var="url" value="${portletConfig.getInitParameter(urlName)}"/>
-				<a class="btn btn-social-icon btn-${name}" href="${fn:replace(url, 'username', preference)}"><i class="icon-${name}"></i></a>
+				<button class="btn btn-social-icon btn-${name}" onclick="location.href='${fn:replace(url, 'username', preference)}'"><i class="icon-${name}"></i></button>
 			</c:if>
 		</c:if>
 	</c:forTokens>
