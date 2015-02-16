@@ -19,15 +19,19 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>hooks</artifactId>
 		<version>1.4.0.0-SNAPSHOT</version>
 	</parent>
+
 	<artifactId>setup-brazilian-regions-hook</artifactId>
 	<packaging>war</packaging>
+
 	<name>Setup Brazilian Regions Hook</name>
 	<description>This app adds the 26 states of Brazil as regions to the Brazil country entity. It enable users to create more complete Brazil's addresses for themselves, contacts and companies.</description>
+
 	<scm>
 		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
 	  <tag>HEAD</tag>

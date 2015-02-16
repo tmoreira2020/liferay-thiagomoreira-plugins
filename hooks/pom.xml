@@ -19,18 +19,29 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>liferay-thiagomoreira-plugins</artifactId>
 		<version>1.4.0.0-SNAPSHOT</version>
 	</parent>
+
 	<artifactId>hooks</artifactId>
 	<packaging>pom</packaging>
+
 	<name>Thiago Moreira Hooks</name>
+
+	<modules>
+		<module>replace-theme-ids-hook</module>
+		<module>setup-brazilian-regions-hook</module>
+		<module>lorem-ipsum-button-hook</module>
+	</modules>
+
 	<scm>
 		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
@@ -38,9 +49,4 @@
 			<version>${liferay.dependencies.version}</version>
 		</dependency>
 	</dependencies>
-	<modules>
-		<module>replace-theme-ids-hook</module>
-		<module>setup-brazilian-regions-hook</module>
-		<module>lorem-ipsum-button-hook</module>
-	</modules>
 </project>

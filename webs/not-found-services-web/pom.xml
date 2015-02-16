@@ -19,15 +19,19 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>webs</artifactId>
 		<version>1.4.0.0-SNAPSHOT</version>
 	</parent>
+
 	<artifactId>not-found-services-web</artifactId>
 	<packaging>pom</packaging>
+
 	<name>Not Found Services Web</name>
 	<description>Service used to store the keywords that returned zero results in a search operation.</description>
+
 	<modules>
 		<module>not-found-services-web-service</module>
 		<module>not-found-services-web-impl</module>

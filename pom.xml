@@ -17,26 +17,67 @@
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>br.com.thiagomoreira</groupId>
 		<artifactId>parent</artifactId>
 		<version>0.4</version>
 	</parent>
-	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 	<artifactId>liferay-thiagomoreira-plugins</artifactId>
 	<version>1.4.0.0-SNAPSHOT</version>
-	<name>Thiago Moreira Plugins</name>
 	<packaging>pom</packaging>
+
+	<name>Thiago Moreira Plugins</name>
 	<description>Set of random plugins developed to Liferay</description>
 	<url>http://www.thiagomoreira.com.br/projects/liferay-thiagomoreira-plugins</url>
 	<inceptionYear>2014</inceptionYear>
+
+	<modules>
+		<module>webs</module>
+		<module>hooks</module>
+		<module>themes</module>
+		<module>portlets</module>
+	</modules>
+
 	<scm>
 		<connection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</connection>
 		<developerConnection>scm:git:git@github.com:tmoreira2020/liferay-thiagomoreira-plugins.git</developerConnection>
 		<url>https://github.com/tmoreira2020/liferay-thiagomoreira-plugins</url>
 		<tag>HEAD</tag>
 	</scm>
+	<issueManagement>
+		<url>https://trello.com/b/8BYOrPHh/liferay-thiago-moreira-plugins</url>
+		<system>Trello</system>
+	</issueManagement>
+	<ciManagement>
+		<url>https://tmoreira2020.ci.cloudbees.com/job/liferay-thiagomoreira-plugins</url>
+	</ciManagement>
+
+	<properties>
+		<liferay.home>${user.home}/projects/thiagomoreira/liferay-portal-6.2-ce-ga2</liferay.home>
+		<liferay.auto.deploy.dir>${liferay.home}/deploy</liferay.auto.deploy.dir>
+		<liferay.app.server.portal.dir>${liferay.home}/tomcat-7.0.42/webapps/ROOT</liferay.app.server.portal.dir>
+		<liferay.dependencies.version>6.2.0-ga1</liferay.dependencies.version>
+		<liferay.plugins.version>6.2.0-ga1</liferay.plugins.version>
+		<powermock.version>1.5.4</powermock.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>liferay-ce</id>
+			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>liferay-ce</id>
+			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -127,7 +168,17 @@
 			<artifactId>portlet-api</artifactId>
 		</dependency>
 	</dependencies>
+
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<exclude>WEB-INF/liferay-plugin-package.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -181,24 +232,8 @@
 				<artifactId>jrebel-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-				<excludes>
-					<exclude>WEB-INF/liferay-plugin-package.properties</exclude>
-				</excludes>
-			</resource>
-		</resources>
 	</build>
-	<properties>
-		<liferay.home>${user.home}/projects/thiagomoreira/liferay-portal-6.2-ce-ga2</liferay.home>
-		<liferay.auto.deploy.dir>${liferay.home}/deploy</liferay.auto.deploy.dir>
-		<liferay.app.server.portal.dir>${liferay.home}/tomcat-7.0.42/webapps/ROOT</liferay.app.server.portal.dir>
-		<liferay.dependencies.version>6.2.0-ga1</liferay.dependencies.version>
-		<liferay.plugins.version>6.2.0-ga1</liferay.plugins.version>
-		<powermock.version>1.5.4</powermock.version>
-	</properties>
+
 	<profiles>
 		<profile>
 			<id>jenkins</id>
@@ -227,29 +262,4 @@
 			</build>
 		</profile>
 	</profiles>
-	<repositories>
-		<repository>
-			<id>liferay-ce</id>
-			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>liferay-ce</id>
-			<url>https://repository.liferay.com/nexus/content/groups/liferay-ce</url>
-		</pluginRepository>
-	</pluginRepositories>
-	<issueManagement>
-		<url>https://trello.com/b/8BYOrPHh/liferay-thiago-moreira-plugins</url>
-		<system>Trello</system>
-	</issueManagement>
-	<ciManagement>
-		<url>https://tmoreira2020.ci.cloudbees.com/job/liferay-thiagomoreira-plugins</url>
-	</ciManagement>
-	<modules>
-		<module>webs</module>
-		<module>hooks</module>
-		<module>themes</module>
-		<module>portlets</module>
-	</modules>
 </project>

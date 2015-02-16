@@ -19,26 +19,18 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>not-found-services-web</artifactId>
 		<version>1.4.0.0-SNAPSHOT</version>
 	</parent>
+
 	<artifactId>not-found-services-web-impl</artifactId>
 	<packaging>war</packaging>
+
 	<name>Not Found Services Web Impl</name>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>com.liferay.maven.plugins</groupId>
-				<artifactId>liferay-maven-plugin</artifactId>
-				<configuration>
-					<apiBaseDir>${basedir}/../not-found-services-web-service</apiBaseDir>
-					<pluginName>not-found-services-web</pluginName>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
@@ -66,4 +58,17 @@
 			<artifactId>powermock-api-easymock</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.liferay.maven.plugins</groupId>
+				<artifactId>liferay-maven-plugin</artifactId>
+				<configuration>
+					<apiBaseDir>${basedir}/../not-found-services-web-service</apiBaseDir>
+					<pluginName>not-found-services-web</pluginName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

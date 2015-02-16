@@ -18,14 +18,17 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 		<artifactId>portlets</artifactId>
 		<version>1.4.0.0-SNAPSHOT</version>
 	</parent>
+
 	<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
 	<artifactId>social-buttons-portlet</artifactId>
 	<packaging>war</packaging>
+
 	<name>Social Buttons Portlet</name>
 	<description>This apps provides a list of social buttons that points to some user's profile. The list of social profiles are: App.net, Bitbucket, Facebook, Flickr, Foursquare, Github, Google Plus, Instagram, Linkedin, Pinterest, Tumblr, Twitter, Vk.</description>
 </project>
