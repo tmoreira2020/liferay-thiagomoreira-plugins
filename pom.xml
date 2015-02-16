@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>br.com.thiagomoreira</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.1</version>
+		<version>0.4</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.thiagomoreira.liferay.plugins</groupId>
@@ -133,12 +133,10 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.17</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
-					<version>2.4</version>
 					<configuration>
 						<archive>
 							<manifest>
