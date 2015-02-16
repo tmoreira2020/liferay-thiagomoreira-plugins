@@ -18,7 +18,7 @@
 <%@ include file="/init.jsp" %>
 
 <c:if test="${not layout.typeControlPanel}">
-	<div class="share-buttons-bar">
+	<div class="share-buttons-bar hidden-phone">
 
 		<%
 			String currentUrl = HttpUtil.encodeURL(PortalUtil.getCurrentCompleteURL(request));
