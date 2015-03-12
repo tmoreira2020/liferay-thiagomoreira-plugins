@@ -31,4 +31,13 @@
 
 	<name>Social Buttons Portlet</name>
 	<description>This apps provides a list of social buttons that points to some user's profile. The list of social profiles are: App.net, Bitbucket, Facebook, Flickr, Foursquare, Github, Google Plus, Instagram, Linkedin, Pinterest, Tumblr, Twitter, Vk.</description>
+
+	<distributionManagement>
+		<relocation>
+			<groupId>br.com.thiagomoreira.liferay.plugins.social-button-app</groupId>
+			<artifactId>social-button-app</artifactId>
+			<version>1.0.0</version>
+			<message>This project was elevated to a top level project on: https://www.thiagomoreira.com.br/projects/social-button-app</message>
+		</relocation>
+	</distributionManagement>
 </project>

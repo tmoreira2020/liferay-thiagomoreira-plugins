@@ -31,4 +31,13 @@
 
 	<name>Share Buttons Portlet</name>
 	<description>This app creates a vertical tab in the left side of the page with 3 buttons used to share the current url on Facebook or Twitter or Google Plus.</description>
+
+	<distributionManagement>
+		<relocation>
+			<groupId>br.com.thiagomoreira.liferay.plugins.share-button-app</groupId>
+			<artifactId>share-button-app</artifactId>
+			<version>1.0.0</version>
+			<message>This project was elevated to a top level project on: https://www.thiagomoreira.com.br/projects/share-button-app</message>
+		</relocation>
+	</distributionManagement>
 </project>
